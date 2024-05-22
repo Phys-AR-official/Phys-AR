@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>TwinAct</title>
+<!--  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">-->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Action Imitation in Common Action Space for
+Customized Action Image Synthesis</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+<!--                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous Authors</a></span> -->
+                <div>
+                    <span class="author-block">
+                    <a  target="_blank">Anonymous Author(s)</a></span>
+                  </div>
+
+
+                      <!-- Paper link -->
+<!--                  <span class="link-block">-->
+<!--                    <a href="" target="_blank"-->
+<!--                    class="external-link button is-normal is-rounded is-dark">-->
+<!--                    <span class="icon">-->
+<!--                      <i class="fas fa-file-pdf"></i>-->
+<!--                    </span>-->
+<!--                    <span>Paper</span>-->
+<!--                  </a>-->
+<!--                </span>-->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                    <!-- Dataset link -->
+                <span class="link-block">
+                      <a href="" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Dataset(Coming soon)</span>
+                    </a>
+                  </span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+We address the challenge of decoupling actions and actors to customize the text-guided diffusion model (TGDM) for few-shot action image generation. Existing methods tend to mix action-irrelevant features into the customized action images, as the few user-provided sample images lack an effective inductive bias to decouple the actions. In this work, we propose a new method, TwinAct, which disentangles actions from their associated actors in a common action space. Our core idea is to construct a common action space that is only related to actions, rather than learning customized action token embedding in an open textual embedding space, thus preventing the token embedding from being contaminated by action-irrelevant details. To be specific, we first analyze and build an action base from the embedding space of the pre-trained large text encoder. Then we generate the customized action embedding by optimizing the weight of these action bases. Additionally, we employ an action similarity loss that improves the accuracy and semantic coherence of the generated images. To comprehensively evaluate TwinAct, we collect a novel dataset, which provides various exemplar images with diverse actions. We compare TwinAct to existing customized TGDMs, demonstrating the effectiveness of our method. We can synthesize novel renditions of the user-specific action in different contexts including animals and customized actors.
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+      <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Traing Data</h2>
+        <div class="item">
+          <img src="static/img/intro_v1.png" alt="MY ALT TEXT"/>
+          <span class="is-justify-content-left">
+            Compare TwinAct with other methods. TwinAct preserves the identity consistency of actors while allowing customized actions to be accurately generalized across different actors by effectively decoupling actions and actors.
+          </span>
+        </div>
+         <div class="item">
+          <img src="static/img/action_basis_v1.png" alt="MY ALT TEXT"/>
+           <span class="is-justify-content-left">
+             The building process of the Common Action Space. First, we collect about 832 action phrases as the initial collection, visualized on the left. Each action phrase is tokenized and encoded into an action embedding group. Then we conduct a Principle Component Analysis to build a compact orthogonal basis, visualized in the middle. With the action space, we can adjust the action or combine some actions to generate new actions, visualized in the right.
+           </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <div class="item">
+          <img src="static/img/model_v3.png" alt="MY ALT TEXT"/>
+        </div>
+        <span class="is-justify-content-left">
+          The overview of the proposed TwinAct. We optimize the coefficients of the action bases to avoid encoding the action-irrelevant features.
+After training, we combine the learned coefficients and shared action base to generate images with the customized action.
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+        <div class="item">
+          <img src="static/img/main_1_v3.png" alt="MY ALT TEXT"/>
+          <span>The results of customized action generation with TwinAct.</span>
+        </div>
+        <div class="item">
+          <img src="static/img/main_3.png" alt="MY ALT TEXT"/>
+          <span>The results of customized actors performing customized actions generated by TwinAct</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </body>
+  </html>
