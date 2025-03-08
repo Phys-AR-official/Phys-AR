@@ -112,59 +112,12 @@ with Diffusion Timestep Tokens via Reinforcement Learning</h1>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We propose a novel method, \textbf{TwinAct}, to tackle the challenge of decoupling actions and actors in order to customize the text-guided diffusion models (TGDMs) for few-shot action image generation. TwinAct addresses the limitations of existing methods that struggle to decouple actions from other semantics (e.g., the actor's appearance) due to the lack of an effective inductive bias with few exemplar images. Our approach introduces a common action space, which is a textual embedding space focused solely on actions, enabling precise customization without actor-related details. Specifically, TwinAct involves three key steps: 1) Building common action space based on a set of representative action phrases; 2) Imitating the customized action within the action space; and 3) Generating highly adaptable customized action images in diverse contexts with an action similarity loss. To comprehensively evaluate TwinAct, we construct a novel benchmark, which provides sample images with various forms of actions. Extensive experiments demonstrate TwinAct's superiority in generating accurate, context-independent customized actions, while maintaining the identity consistency of different subjects, including animals, humans and even customized actors.
-      </div>
+            Despite recent progress in video generation, producing videos that adhere to physical laws remains a significant challenge. Traditional diffusion-based methods struggle to extrapolate to unseen physical conditions (e.g., velocity) due to their reliance on data-driven approximations. To address this, we propose to integrate symbolic reasoning and reinforcement learning to enforce physical consistency in video generation. We first introduce the Diffusion Timestep Tokenizer (DDT), which learns discrete, recursive visual tokens by recovering visual attributes lost during the diffusion process. The recursive visual tokens enable symbolic reasoning by a large language model. Based on it, we propose the PhysAR framework, which consists of two stages: The first stage uses supervised fine-tuning to transfer symbolic knowledge, while the second stage applies reinforcement learning to optimize the model’s reasoning abilities through reward functions based on physical conditions. Our approach allows the model to dynamically adjust and improve the physical properties of generated videos, ensuring adherence to physical laws. Experimental results demonstrate that PhysAR can generate videos that are physically consistent.
+        </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
-
-      <section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">Method</h2>
-        
-         <div class="item">
-          <img src="static/img/action_basis_v1.png" alt="MY ALT TEXT"/>
-           <span class="is-justify-content-left">
-             Figure 1. The building process of the Common Action Space. First, we collect about 832 action phrases as the initial collection, visualized on the left. Each action phrase is tokenized and encoded into an action embedding group. Then we conduct a Principle Component Analysis to build a compact orthogonal basis, visualized in the middle. With the action space, we can adjust the action or combine some actions to generate new actions, visualized in the right.
-           </span>
-        </div>
-        
-        <div class="item">
-          <img src="static/img/model_v3.png" alt="MY ALT TEXT"/>
-           <span class="is-justify-content-left">
-             Figure 2. The overview of the proposed TwinAct. We optimize the coefficients of the action bases to avoid encoding the action-irrelevant features. After training, we combine the learned coefficients and shared action base to generate images with the customized action.
-           </span>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
-        <div class="item">
-          <img src="static/img/intro_v1.png" alt="MY ALT TEXT"/>
-          <span>Figure 3. Compare TwinAct with other methods. TwinAct preserves the identity consistency of actors while allowing customized actions to be accurately generalized across different actors by effectively decoupling actions and actors.</span>
-        </div>
-        <div class="item">
-          <img src="static/img/main_1_v3.png" alt="MY ALT TEXT"/>
-          <span>Figure 4. The results of customized action generation with TwinAct.</span>
-        </div>
-        <div class="item">
-          <img src="static/img/main_3.png" alt="MY ALT TEXT"/>
-          <span>Figure 5. The results of customized actors performing customized actions generated by TwinAct</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!--  -->
 
   </body>
   </html>
